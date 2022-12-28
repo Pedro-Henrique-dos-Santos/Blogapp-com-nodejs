@@ -1,0 +1,28 @@
+
+<div class="p-5 mb-4 bg-light rounded-3">
+    <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">Bem vindo ao blog do node</h1>
+        <p class="col-md-8 fs-4">Using a series of utilities, you can create this jumbotron, just like the one in
+            previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your
+            liking.</p>
+        <button class="btn btn-dark btn-lg" type="button">Crie uma conta</button>
+    </div>
+</div>
+<hr>
+
+<h2>Postagens recentes</h2>
+{{#each postagens}}
+<div class="card">
+    <div class="card-body">
+        <h3>{{titulo}}</h3>
+        <p>{{descricao}}</p>
+         <a href="/postagem/{{slug}}"><button class="btn btn-success">Leia mais</button></a>
+        <hr>
+        <small>Categoria: {{categoria.nome}}</small>
+        <small>Data de publicação:{{data}}</small>
+    </div>
+</div>
+
+{{else}}
+<h5>Nenhuma postagem</h5>
+{{/each}}
